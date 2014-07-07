@@ -1,0 +1,7 @@
+todo:
+
+Mine for data (BBC, CBC, Al Jazeera)
+Estimate the position of the news
+Categorize the data (Machine Learning!)
+
+JAVASCRIPT MAP

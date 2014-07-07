@@ -64,10 +64,12 @@ WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+DATABASE_PATH = os.path.join(BASE_DIR, 'rango.db')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': DATABASE_PATH,
     }
 }
 
@@ -87,5 +89,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+STATIC_PATH = os.path.join(BASE_DIR,'static')
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # You may find this is already defined as such.
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media directory
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
